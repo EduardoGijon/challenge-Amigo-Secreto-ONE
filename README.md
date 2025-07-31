@@ -17,11 +17,15 @@ Esta es una aplicación web básica que implementa el challenge de Alura de "Ami
 
 # Cómo usar
   1. Ingresa los nombres de los participantes en el campo de texto
-  2. Haz clic en "Agregar" para añadir cada nombre a la lista
+     ![Agregando amigos](assets/agregando-amigo.jpg)
+  2. Haz clic en "Añadir" para añadir cada nombre a la lista
+     ![Amigo agregado](assets/amigo-agregado.png)
   3. Cuando hayas agregado todos los nombres, haz clic en "Sortear amigo secreto"
+     ![Amigos agregados](assets/amigos-agregados.png)
   4. ¡El sistema seleccionará aleatoriamente y mostrará el amigo secreto!
+     ![Amigo secreto seleccionado](assets/amigo-secreto-seleccionado.png)
 
 # Instalación
-No se requiere instalación. Simplemente abre el archivo index.html en tu navegador web favorito.
-  `git clone https://github.com/EduardoGijon/challenge-Amigo-Secreto-ONE`
-  `cd challenge-Amigo-Secreto-ONE/`
+No se requiere instalación. Simplemente descarga los archivos desde el repositorio y abre el archivo index.html en tu navegador web favorito.
+  1. `git clone https://github.com/EduardoGijon/challenge-Amigo-Secreto-ONE`
+  2. `cd challenge-Amigo-Secreto-ONE/`
