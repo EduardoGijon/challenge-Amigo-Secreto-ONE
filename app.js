@@ -1,4 +1,3 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 let amigosLista = [];
 
 function agregarAmigo(){
@@ -7,13 +6,38 @@ function agregarAmigo(){
     
     //Verificar si el valor amigo no este vacio!
     if (esLongAmigoCero(amigo)){
+        //Si el campo esta vacio muestra alerta
         mostrarAlerta('Porfavor rellenar el campo');
     }else{
+        //Si no esta vacio ingresa el nombre a la lista, limpia el campo de texto y actualiza la lista
         amigosLista.push(amigo);
-        console.log(amigosLista);
         limpiarInput('amigo');
+        actualizarListaHTML('listaAmigos');
     }
 
+}
+
+//Actualiza la lista dinamicamente conforme haya nuevas entradas validas
+function actualizarListaHTML(elementoLista){
+    //Se limpia la lista anterior para evitar la repeticion de renglones
+    limpiarListaHTML(elementoLista);
+    //Se obtiene la lista que se va a manipular en el dom
+    let listaAmigos = document.getElementById(elementoLista);
+
+    //Ciclo que recorre de inicio a fin el array de los amigos
+    for(i=0; i<=amigosLista.length-1; i++){
+        //Se crea un nuevo elemento en el dom del tipo li (list item)
+        const nuevoElemento = document.createElement('li');
+        //A ese nuevo elemento se le agrega el texto que esta almacenado en la posicion i del array
+        nuevoElemento.textContent = amigosLista[i];
+        //El nuevo elemento se agrega a la lista y se muestra
+        listaAmigos.appendChild(nuevoElemento);
+    }
+    
+}
+
+function limpiarListaHTML(elementoLista){
+    document.getElementById(elementoLista).textContent = '';
 }
 
 function esLongAmigoCero(amigo){
