@@ -2,7 +2,6 @@ let amigosLista = [];
 let indiceAleatorio;
 
 function agregarAmigo(){
-    insertarTextoElementoHTML('resultado','');
     
     //Se obtiene el valor del input con el id amigo
     let amigo = document.getElementById('amigo').value;
@@ -12,6 +11,7 @@ function agregarAmigo(){
         //Si el campo esta vacio muestra alerta
         mostrarAlerta('Porfavor rellenar el campo');
     }else{
+        insertarTextoElementoHTML('resultado','');
         //Si no esta vacio ingresa el nombre a la lista, limpia el campo de texto y actualiza la lista
         amigosLista.push(amigo);
         limpiarInput('amigo');
